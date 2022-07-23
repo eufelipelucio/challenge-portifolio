@@ -34,6 +34,9 @@ section.menu img{
     height:1.7rem;
     padding-right: 0.5rem;
 }
+section.menu header .menu__title{
+    min-width:93px;
+}
 section.menu header{
     display: flex;
     align-items: center;
@@ -49,13 +52,13 @@ nav{
 }
 
 section.menu h3{
-    font-size: 14px;
+    font-size: 16px;
     color: var(--cor-azul-principal);
 }
 section.menu .menu__list{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin:0 1rem 0 2rem;
     padding: 0;
     width: 100%;    
@@ -67,52 +70,43 @@ section.menu .menu__list__item{
 }
 section.menu .menu__list__item a{
     color: var(--cor-azul-principal);
-    font-size: 14px;
+    font-size: 13px;
+    font-weight: bold;
 }
 section.menu .menu__list__item a:hover{
     color: var(--cor-secundary);
     transition: 0.5s;    
 }
-
-section.menu .menu__list__item__contato a{
-    font-weight: bold;
-    font-size: 14px;
-    color: var(--cor-azul-principal);
-}
 /*Sessão Title*/
 
 section.title{
+    display: flex;
     background-image: linear-gradient(to bottom, var(--cor-secundary), var(--cor-azul-principal));
     color: var(--cor-de-branco);
-    padding: 1rem 0;
+    padding: 1rem ;
 }
 section.title .title__div{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-direction: row-reverse;
     align-items: center;
-    margin: 0 3%;
 }
 section.title .title__div .title__container{
     display:flex;
     flex-direction: column;
-    min-width: 360px;
 }
 section.title .title__div .title__container .title__bio{
-    diplay: flex;
     font-size: 52px;
-    min-width:300px;
-    margin-bottom: 1rem;
+    word-break: break-all;
 }
 section.title .title__div .title__container .title__subsection{
-    display: flex;
     font-size: 18px;
-    margin-right: 1rem;
+    word-break: break-word;
+
 }
 section.title .title__div .title__container .title__network{
     display: flex;
-
+    max-width: 320px;
     padding: 0;
     margin: 0;
 }
@@ -154,6 +148,7 @@ section.skills{
 }
 section.skills .skills__line{
     display:flex;
+    justify-content: space-around;
     margin: 0 auto;
     flex-wrap: wrap;
 }
@@ -171,8 +166,10 @@ section.skills .skills__line .skills__box{
     margin-left: 1rem;
     margin-bottom:1rem;
 }
-section.skills .skills__line .skills__box:nth-child(5n){
+section.skills .skills__line .skills__box:hover, section.hobbies .hobbies__line .hobbies__box:hover{
     background-color: var(--cor-secundary);
+    transition: 0.5s;
+    cursor: pointer;
 }
 section.skills .skills__line .skills__box ul{
     display:flex;
@@ -193,17 +190,22 @@ section.hobbies{
 }
 section.hobbies .hobbies__line{
     display:flex;
+    justify-content: space-around;
+    margin: 0 auto;
     flex-wrap: wrap;
 }
 
 section.hobbies .hobbies__line .hobbies__box{
     display:flex;
     justify-content: center;
-    width:8rem;
-    height:8rem;
+    width: 10rem;
+    min-width: 100px;
+    height:10rem;
     border-radius: 10px;
     background-color: var(--cor-azul-principal);
     color: var(--cor-de-branco);
+    margin-left: 1rem;
+    margin-bottom:1rem;
 }
 section.hobbies .hobbies__line .hobbies__box ul{
     display:flex;
@@ -214,11 +216,32 @@ section.hobbies .hobbies__line .hobbies__box ul{
     margin:0;
     height:100%;
 }
+.hobbies__img img{
+    backgroud-color:#fff;
+    height:33px;
+}
 
 /* Experiência Acadêmica*/
 
 section.academic{
-
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+section.academic .academic__courses{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+section.academic .academic__courses ul{
+    padding:0;
+}
+section.academic .academic__courses .academic__courses__box .academic__courses__item__title{
+    max-width: 250px;
+}
+.academic__courses__item__img img{
+    width:250px;
 }
 
 /* experiência*/
@@ -243,9 +266,35 @@ section.footer{
 utilize como referência os breakpoints @media abaixo*/
 
 /*Tablet*/
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 
 /* Menu */
+section.menu{
+    display: flex;
+    justify-content: space-around;
+}
+section.menu nav{
+    display: flex;
+    justify-content: right;
+}
+section.menu .menu__list{
+    display: none;
+}
+section.title .title__div .title__profile{
+    width:150px;
+    height:150px;
+}
+section.title .title__div .title__container .title__bio{
+    font-size: 22px;
+    margin-right:0.7rem
+}
+section.title .title__div .title__container .title__subsection{
+    font-size: 16px;
+    font-weight:normal;
+}
+section.title .title__div .title__container .title__network .title__network__item a{
+    font-size: 13px;
+}
 
 /*title*/
 
