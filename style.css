@@ -247,15 +247,90 @@ section.academic .academic__courses .academic__courses__box .academic__courses__
 /* experiência*/
 
 section.experience{
-
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
 }
+section.experience .experiencie__box:nth-child(2n+1){
+    background-color: var(--cor-azul-principal);
+    color: var(--cor-de-branco);
+    flex-direction: row-reverse;
+}
+section.experience .experiencie__box {
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1rem auto;
+}
+section.experience .experiencie__box img{
+    max-width: 500px;
+    min-width: 300px;
+    margin: 1rem;
+}
+section.experience .experiencie__box .experience__title{
+    margin: 0 auto;
+    max-width: 400px;
+    min-width: 300px;    
+}
+section.experience .experiencie__box .experience__info{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:1rem;
+}
+ .experience__repo a button{
+    border: none;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    border:1px solid var(--cor-azul-principal);
+    color: var(--cor-azul-principal);
+    
+}
+.experience__demo a button{
+    padding: 15px 25px;
+    backgroud-color: var(--cor-azul-principal);
+    color:var(--cor-secundary);
+    padding: 15px 25px;
+    border:1px solid var(--cor-secundary);
+    text-align: center;
+    text-decoration: none;
+}
+
 
 /*Contato*/
 
 section.formcontato{
-
+    display:flex;
+    justify-content:center;
+    margin:0 3%;
 }
-
+section.formcontato .formcontato__contacto{
+    display:flex;
+    justify-content:center;
+}
+section.formcontato .formcontato__contacto .formcontato--esquerda img{
+    display:flex;
+    width:400px;
+}
+section.formcontato .formcontato__contacto .formcontato__text{
+    display:flex;
+    width:50%;
+    height:100%;
+    flex-direction: column;
+    text-align:left;
+    padding:0 1rem;
+}
+section.formcontato .formcontato__contacto .formcontato__text .formcontato__form{
+    display:flex;
+    height:100%;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
 /*footeer*/
 
 section.footer{
