@@ -87,9 +87,12 @@ section.title{
 }
 section.title .title__div{
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    align-items: center;
+}
+section.title .title__div .title__profile{
+    display: flex;
+    height: 368px;
+    align-self:flex-end;
 }
 section.title .title__div .title__container{
     display:flex;
@@ -97,7 +100,7 @@ section.title .title__div .title__container{
 }
 section.title .title__div .title__container .title__bio{
     font-size: 52px;
-    word-break: break-all;
+    word-break: break-work;
 }
 section.title .title__div .title__container .title__subsection{
     font-size: 18px;
@@ -131,9 +134,8 @@ section.title .title__div .title__container .title__network .title__network__ite
 
 section.about{
     display: flex;
-}
-section.about .about__container{
     margin:0 3%;    
+
 }
 section.about .about__title{
     display:flex;
@@ -294,7 +296,6 @@ section.experience .experiencie__box .experience__info{
     padding: 15px 25px;
     backgroud-color: var(--cor-azul-principal);
     color:var(--cor-secundary);
-    padding: 15px 25px;
     border:1px solid var(--cor-secundary);
     text-align: center;
     text-decoration: none;
@@ -331,10 +332,32 @@ section.formcontato .formcontato__contacto .formcontato__text .formcontato__form
     flex-direction: column;
     
 }
+.formcontato__form input{
+    height:30px;
+    margin-bottom:1rem;
+    border-radius:5px;
+    border:1px solid var(--cor-azul-principal);
+}
+.formcontato__form textarea{
+    height:100px;
+    margin-bottom:1rem;
+    border-radius:5px;
+    border:1px solid var(--cor-azul-principal);
+}
+.formcontato__form button{
+    width:150px;
+    height:30px;
+    font-size:16px;
+    margin-bottom:1rem;
+    border-radius:5px;
+    border:1px solid var(--cor-azul-principal);
+}
 /*footeer*/
 
 section.footer{
-   
+    
+    background-color: var(--cor-azul-principal);
+    color: var(--cor-de-branco);
 }
 
 /* Chegou a hora de se desafiar com a responsividade, 
@@ -355,6 +378,17 @@ section.menu nav{
 section.menu .menu__list{
     display: none;
 }
+
+ /*Contato*/
+section.formcontato .formcontato__contacto .formcontato--esquerda{
+    display:none;
+}
+section.formcontato .formcontato__contacto .formcontato__text{
+    width:100%;
+}
+
+
+/*title*/
 section.title .title__div .title__profile{
     width:150px;
     height:150px;
@@ -371,22 +405,23 @@ section.title .title__div .title__container .title__network .title__network__ite
     font-size: 13px;
 }
 
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Experiências acadêmicas*/
-
-/*Expeirência profissional*/
-
 }
 
 /*Mobile*/
-@media (min-width: 425px) {
+@media (max-width: 425px) {
 
 /*Menu*/
+section.title .title__div{
+    display:flex;
+    flex-direction: column-reverse;
+}
+section.title .title__div .title__profile{
+    width:100px;
+    height:100px;
+    align-self:flex-start;
+
+}
+
 
 /*Titulo*/
 
